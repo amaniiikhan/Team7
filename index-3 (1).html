@@ -1,0 +1,135 @@
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Music Analytics Dashboard
+  </title>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <style>
+   body {
+            font-family: 'Inter', sans-serif;
+        }
+  </style>
+ </head>
+ <body class="bg-gray-800 text-white">
+  <div class="container mx-auto px-10 py-8">
+   <header class="flex justify-between items-center py-6">
+    <div class="flex items-center">
+     <img alt="Spotify logo" class="mr-3" height="50" src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-euzpUPLvjnRGSWbgVYQXvD7j/user-UmmS0JesFNVKnuBjRyG1qKnv/img-HezAHpamcSjZyYWgkTXDJJDf.png?st=2023-12-01T17%3A28%3A27Z&amp;se=2023-12-01T19%3A28%3A27Z&amp;sp=r&amp;sv=2021-08-06&amp;sr=b&amp;rscd=inline&amp;rsct=image/png&amp;skoid=6aaadede-4fb3-4698-a8f6-684d7786b067&amp;sktid=a48cca56-e6da-484e-a814-9c849652bcb3&amp;skt=2023-11-30T23%3A30%3A08Z&amp;ske=2023-12-01T23%3A30%3A08Z&amp;sks=b&amp;skv=2021-08-06&amp;sig=SMv9dhlLfhq7JKA3/tWGRFVTCLyxtEINCdOzWAjjexs%3D" width="50"/>
+     <nav class="flex space-x-4">
+      <a class="text-gray-300 hover:text-white" href="#">
+       Listening
+      </a>
+      <a class="text-gray-300 hover:text-white" href="#">
+       Carousel
+      </a>
+      <a class="text-gray-300 hover:text-white" href="#">
+       Songs
+      </a>
+      <a class="text-gray-300 hover:text-white" href="#">
+       Sounds
+      </a>
+      <a class="text-gray-300 hover:text-white" href="#">
+        Sign Up
+       </a>
+     </nav>
+    </div>
+    <div class="flex items-center">
+     <a class="text-gray-300 hover:text-white mr-4" href="#">
+      Search Friends
+     </a>
+     <i class="fas fa-search text-gray-300 hover:text-white">
+     </i>
+    </div>
+   </header>
+   <main>
+    <section class="text-center py-10">
+     <h1 class="text-5xl font-bold mb-6">
+      That's a Wrap
+     </h1>
+     <div class="flex justify-center space-x-6">
+      <div class="bg-gray-700 px-4 py-2 rounded-lg">
+       <p class="text-sm text-gray-400">
+        Top
+       </p>
+       <p class="text-2xl font-semibold">
+        10
+       </p>
+      </div>
+
+      <div class="bg-gray-700 px-4 py-2 rounded-lg">
+       <p class="text-sm text-gray-400">
+        Followers
+       </p>
+       <p class="text-2xl font-semibold">
+        129
+       </p>
+      </div>
+      <div class="bg-gray-700 px-4 py-2 rounded-lg">
+       <p class="text-sm text-gray-400">
+        Following
+       </p>
+       <p class="text-2xl font-semibold">
+        46
+       </p>
+      </div>
+      <div class="bg-gray-700 px-4 py-2 rounded-lg">
+       <p class="text-sm text-gray-400">
+        Wraps
+       </p>
+       <p class="text-2xl font-semibold">
+        16
+       </p>
+      </div>
+     </div>
+    </section>
+    <section class="py-10">
+     <div class="grid grid-cols-4 gap-6">
+      <div class="bg-gray-700 p-6 rounded-lg">
+       <h2 class="text-xl font-semibold mb-4">
+        Songs of the Month
+       </h2>
+       <p class="text-gray-400 text-sm">
+        Rich Baby Daddy<br>
+        Hotline Bling<br>
+        Paint the Town Red<br>
+
+       </p>
+      </div>
+      <div class="bg-gray-700 p-6 rounded-lg">
+       <h2 class="text-xl font-semibold mb-4">
+        Artist
+       </h2>
+       <img alt="Artist profile picture" class="rounded-full mx-auto mb-4" height="100" src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-euzpUPLvjnRGSWbgVYQXvD7j/user-UmmS0JesFNVKnuBjRyG1qKnv/img-iMvQ8sTkGqaIVFIgz2KmSE3j.png?st=2023-12-01T17%3A28%3A31Z&amp;se=2023-12-01T19%3A28%3A31Z&amp;sp=r&amp;sv=2021-08-06&amp;sr=b&amp;rscd=inline&amp;rsct=image/png&amp;skoid=6aaadede-4fb3-4698-a8f6-684d7786b067&amp;sktid=a48cca56-e6da-484e-a814-9c849652bcb3&amp;skt=2023-11-30T23%3A44%3A08Z&amp;ske=2023-12-01T23%3A44%3A08Z&amp;sks=b&amp;skv=2021-08-06&amp;sig=rEFAm09SwtLb4kNHyLwJK6Qeq7rkS9ARCCooJy1QR5I%3D" width="100"/>
+       <p class="text-gray-400 text-sm">
+        Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.
+       </p>
+      </div>
+      <div class="bg-gray-700 p-6 rounded-lg">
+       <h2 class="text-xl font-semibold mb-4">
+        Top Artists
+       </h2>
+       <img alt="Top artist profile picture" class="rounded-full mx-auto mb-4" height="100" src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-euzpUPLvjnRGSWbgVYQXvD7j/user-UmmS0JesFNVKnuBjRyG1qKnv/img-xugFVq34ZJDKswMXbsCIfayA.png?st=2023-12-01T17%3A28%3A30Z&amp;se=2023-12-01T19%3A28%3A30Z&amp;sp=r&amp;sv=2021-08-06&amp;sr=b&amp;rscd=inline&amp;rsct=image/png&amp;skoid=6aaadede-4fb3-4698-a8f6-684d7786b067&amp;sktid=a48cca56-e6da-484e-a814-9c849652bcb3&amp;skt=2023-11-30T23%3A17%3A28Z&amp;ske=2023-12-01T23%3A17%3A28Z&amp;sks=b&amp;skv=2021-08-06&amp;sig=hBT63znUAdyk17eL2XthFFePar09enSlBMXs0WdE8Ow%3D" width="100"/>
+       <p class="text-gray-400 text-sm">
+        Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Nullam id dolor id nibh ultricies vehicula ut id elit.
+       </p>
+      </div>
+      <div class="bg-gray-700 p-6 rounded-lg">
+       <h2 class="text-xl font-semibold mb-4">
+        Genres
+       </h2>
+       <img alt="Genre icon" class="mx-auto mb-4" height="100" src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-euzpUPLvjnRGSWbgVYQXvD7j/user-UmmS0JesFNVKnuBjRyG1qKnv/img-qkYuuNxRpxrEpHyquOaQ92Kw.png?st=2023-12-01T17%3A28%3A31Z&amp;se=2023-12-01T19%3A28%3A31Z&amp;sp=r&amp;sv=2021-08-06&amp;sr=b&amp;rscd=inline&amp;rsct=image/png&amp;skoid=6aaadede-4fb3-4698-a8f6-684d7786b067&amp;sktid=a48cca56-e6da-484e-a814-9c849652bcb3&amp;skt=2023-11-30T23%3A15%3A44Z&amp;ske=2023-12-01T23%3A15%3A44Z&amp;sks=b&amp;skv=2021-08-06&amp;sig=UdQQE68POrRyl3Sw9i4b3ZidOvOOBUIBadHo96pNp34%3D" width="100"/>
+       <p class="text-gray-400 text-sm">
+        Maecenas sed diam eget risus varius blandit sit amet non magna. Cras mattis consectetur purus sit amet fermentum.
+       </p>
+      </div>
+     </div>
+    </section>
+   </main>
+  </div>
+ </body>
+</html>
