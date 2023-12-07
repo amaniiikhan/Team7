@@ -7,6 +7,7 @@
   </title>
   <script src="https://cdn.tailwindcss.com">
   </script>
+
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
   <style>
@@ -14,6 +15,7 @@
             font-family: 'Inter', sans-serif;
         }
   </style>
+  
  </head>
  <body class="bg-gray-800 text-white">
   <div class="container mx-auto px-10 py-8">
@@ -81,6 +83,7 @@
        <p class="text-sm text-gray-400">
         Wraps
        </p>
+
        <p class="text-2xl font-semibold">
         16
        </p>
@@ -93,6 +96,36 @@
        <h2 class="text-xl font-semibold mb-4">
         Songs of the Month
        </h2>
+       <script>
+
+        // Authorization token that must have been created previously. See : https://developer.spotify.com/documentation/web-api/concepts/authorization
+        const token = 'BQCuo0QtdiYvJdk93vXmOYJPqbfFwv7aRJ87m1gUJyo-nCTlE5qKqZiuMO5fstbLu3Ue2zYrz1UYzisWl1jVMQXygXUAin5Al_s7Sy1J7_1Dnw3tEZM9_e0xxg5Wko4ZYMu9sBNjMecICCDOiIg8gJ8_BYmodFLMpXuEiCtUyUD_FOgap_778Af73oqOxGLTVkbDpR0husmwZ336FjeLtqDbdCBXG0bNjTTtGyoR3C8lT-G-weFDiHblsjKLMGDj';
+        async function fetchWebApi(endpoint, method, body) {
+          const res = await fetch(`https://api.spotify.com/${endpoint}`, {
+            headers: {
+              Authorization: `Bearer ${token}`,
+            },
+            method,
+            body:JSON.stringify(body)
+          });
+          return await res.json();
+        }
+        
+        async function getTopTracks(){
+          // Endpoint reference : https://developer.spotify.com/documentation/web-api/reference/get-users-top-artists-and-tracks
+          return (await fetchWebApi(
+            'v1/me/top/tracks?time_range=long_term&limit=5', 'GET'
+          )).items;
+        }
+        
+        const topTracks = await getTopTracks();
+        console.log(
+          topTracks?.map(
+            ({name, artists}) =>
+              `${name} by ${artists.map(artist => artist.name).join(', ')}`
+          )
+        );
+          </script>
        <p class="text-gray-400 text-sm">
         Rich Baby Daddy<br>
         Hotline Bling<br>
@@ -128,6 +161,7 @@
        </p>
       </div>
      </div>
+
     </section>
    </main>
   </div>
