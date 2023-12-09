@@ -1,46 +1,26 @@
-<!-- login.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login Page</title>
-    <h1 class="text-5xl font-bold mb-6" style="text-align:center; top:-200px;"> 
-        That's a Wrap
-       </h1>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Inter', sans-serif;
-        }
-    </style>
+    <link rel="stylesheet" href="homepage.css">
 </head>
-<body class="bg-gray-800 text-white">
-    <div class="flex items-center justify-center h-screen">
-        <div class="w-full max-w-md">
-            <form class="bg-gray-700 shadow-md rounded px-8 pt-6 pb-8 mb-4">
-                <!-- login section -->
-                <div class="mb-4">
-                    <label class="block text-gray-300 text-sm font-bold mb-2" for="loginUsername">
-                        Username
-                    </label>
-                    <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="loginUsername" type="text" placeholder="Username">
-                </div>
-                <div class="mb-6">
-                    <label class="block text-gray-300 text-sm font-bold mb-2" for="loginPassword">
-                        Password
-                    </label>
-                    <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline" id="loginPassword" type="password" placeholder="******************">
-                </div>
-                <div class="flex items-center justify-between">
-                    <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button">
-                        Log In
-                    </button>
-                    
-                </div>
-            </form>
+<body>
+
+<div class="form-container">
+    <img class="image-left" src="gif.gif" alt="Image 1">
+    <h1><strong>That's a Wrap</strong></h1>
+    <form>
+        <div>
+            <input type="text" id="username" placeholder="Username">
         </div>
-    </div>
-</body>
-</html>
+        <div>
+            <input type="password" id="password" placeholder="Password">
+        </div>
+        <div>
+            <button type="submit">Login</button>
+        </div>
+        <img class="image-right" src="gif2.gif" alt="Image 2">
+    </form>
+</div>
