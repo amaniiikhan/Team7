@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up Page</title>
+    <link rel="stylesheet" href="homepage.css">
+</head>
+<body>
+    <div>
+        <img class="image-left" src="gif.gif" alt="Image 1">
+        <h1>That's a Wrap</h1>
+        <form>
+            <div>                
+                <input type="text" id="username" placeholder="Username">
+            </div>
+            <div>  
+                <input type="password" id="password" placeholder="Password">
+            </div>
+            <div>
+                <input type="email" id="email" placeholder="example@example.com">
+            </div>
+            <div>
+                <a href="login.html">Already have an account?</a>
+            </div>
+            <div>
+                <button type="submit">Sign Up</button>
+            </div>              
+            <div>
+            {% if error %}
+                <p>{{ error }}</p>
+            {% endif %}
+            </div>                      
+            <img class="image-right" src="gif2.gif" alt="Image 2">            
+        </form>
+    </div>
+</body>
+</html>
+
