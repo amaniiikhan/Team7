@@ -10,7 +10,7 @@
     <div>
         <img class="image-left" src="gif.gif" alt="Image 1">
         <h1>That's a Wrap</h1>
-        <form>
+        <form method="POST" action="/signup">
             <div>                
                 <input type="text" id="username" placeholder="Username">
             </div>
@@ -25,12 +25,12 @@
             </div>
             <div>
                 <button type="submit">Sign Up</button>
-            </div>              
+            </div>   
             <div>
-            {% if error %}
-                <p>{{ error }}</p>
-            {% endif %}
-            </div>                      
+                {% if error %}
+                    <p style="color: red;">{{error}}</p>
+                {% endif %}     
+            </div>                               
             <img class="image-right" src="gif2.gif" alt="Image 2">            
         </form>
     </div>
