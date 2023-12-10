@@ -79,7 +79,7 @@ def login():
 # route to after sign up page
 @app.route('/aftersignup')
 def aftersignup():
-    return render_template('"aftersignup.html"')
+    return render_template('aftersignup.html')
 
 # routes to after login page
 @app.route('/afterlogin')
