@@ -20,6 +20,11 @@
         <div>
             <button type="submit">Login</button>
         </div>
+        <div>
+        {% if error %}
+            <p>{{ error }}</p>
+        {% endif %}
+        </div>
         <img class="image-right" src="gif2.gif" alt="Image 2">
     </form>
 </div>
