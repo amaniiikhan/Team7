@@ -1,36 +1,21 @@
-import sqlite3 as db
+import sqlite3
 
-conn = db.connect('user_login.db')
+def create_user_table(conn):
+    cursor = conn.cursor()
+    cursor.execute('''
+        CREATE TABLE IF NOT EXISTS users (
+            id INTEGER PRIMARY KEY,
+            username TEXT UNIQUE NOT NULL,
+            password TEXT NOT NULL,
+            email TEXT UNIQUE NOT NULL
+        )
+    ''')
+    conn.commit()
 
-cursor = conn.cursor()
+def create_database():
+    conn = sqlite3.connect('user_login.db')
+    create_user_table(conn)
+    conn.close()
 
-# creates table for username, password, then email
-cursor.execute('''
-    CREATE TABLE IF NOT EXISTS users (
-        id INTEGER PRIMARY KEY,
-        username TEXT NOT NULL UNIQUE,
-        password TEXT NOT NULL,
-    )
-''')
-
-# adding a user to the database
-def add_user(username, password, email):
-    try:
-        cursor.execute('INSERT INTO users (username, password) VALUES (?, ?, ?)', (username, password, email))
-        conn.commit()
-        print("User added successfully!")
-    except db.IntegrityError as e:
-        print(f"Failed to add user: {e}")
-    except Exception as e:
-        print(f"An error occurred: {e}")
-
-# verifies it's correct
-def verify_user(username, password):
-    cursor.execute('SELECT * FROM users WHERE username = ? AND password = ?', (username, password))
-    user = cursor.fetchone()
-    if user:
-        print("Login successful!")
-    else:
-        print("Invalid username or password")
-
-conn.close()
+if __name__ == "__main__":
+    create_database()
