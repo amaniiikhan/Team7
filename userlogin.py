@@ -30,7 +30,7 @@ def create_user(username, password, email):
         conn.close()
 
 # routes the signup process, & handles errors like username taken
-@app.route('/', methods=['GET', 'POST'])
+@app.route('/signup', methods=['GET', 'POST'])
 def signup():
     error_message = None
 
@@ -79,7 +79,7 @@ def login():
 # route to after sign up page
 @app.route('/aftersignup')
 def aftersignup():
-    return render_template('aftersignup.html')
+    return render_template('"aftersignup.html"')
 
 # routes to after login page
 @app.route('/afterlogin')
