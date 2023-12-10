@@ -83,7 +83,7 @@ def aftersignup():
 
 # routes to after login page
 @app.route('/afterlogin')
-def dashboard():
+def afterlogin():
     return render_template('afterlogin.html')
 
 if __name__ == '__main__':
