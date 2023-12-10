@@ -6,14 +6,6 @@ from create_db import create_database, create_user_table
 
 app = Flask(__name__)
 
-def initialize_database():
-    create_database()  # creates db
-    conn = sqlite3.connect('user_login.db')
-    create_user_table(conn)  #creates user table
-    conn.close()
-
-#initialize database
-initialize_database()
 
 # function that connects to the database (user_login.db will be created)from create_db.py
 def get_db_connection():
